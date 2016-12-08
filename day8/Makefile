@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS =-g -Wall -Wextra -Werror -pedantic -std=c99 -O0
+CFLAGS =-g3 -Wall -Wextra -pedantic -Og
 INCLUDES=-I../lib
 LIBS=-L.
 
@@ -12,10 +12,10 @@ p2.o: p2.c
 	$(CC) $(CFLAGS) $(INCLUDES) -O -c p2.c
 
 p1: p1.o libaoc.a
-	$(CC) $(LIBS) -o p1 p1.o -laoc
+	$(CC) $(CFLAGS) $(LIBS) -o p1 p1.o -laoc
 
 p2: p2.o libaoc.a
-	$(CC) $(LIBS) -o p2 p2.o -laoc
+	$(CC) $(CFLAGS) $(LIBS) -o p2 p2.o -laoc
 
 aoc.o: 
 	$(CC) $(CFLAGS) $(INCLUDES) -c ../lib/aoc.c
