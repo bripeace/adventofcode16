@@ -23,7 +23,6 @@ int main (int argc, char **argv)
         line[len-1] = 0;
         len--;
         char *p = line;
-        printf("%s - ",p);
         while (*p) {
             if (*p == '(') {
                 int width = strtoul(&p[1], NULL, 0);
@@ -46,6 +45,6 @@ int main (int argc, char **argv)
         printf("%d\n",sum);
         free(line);
     }
-
+    fclose(fp);
 }
 

@@ -62,6 +62,6 @@ int main (int argc, char **argv)
         printf("Decrypt Lenght: %lu\n",sum);
         free(line);
     }
-
+    fclose(fp);
 }
 
