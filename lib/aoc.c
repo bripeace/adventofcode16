@@ -61,7 +61,7 @@ char *readline(FILE *fp)
     //shrink buf to only the size we used 
     //include space for \n and 0
     if (len+2 < buf_size) {
-        char *new_buf = realloc(buf, len+2 * sizeof *buf);
+        char *new_buf = realloc(buf, (len+2) * sizeof *buf);
         if (new_buf == NULL) {
             goto fail;
         }            
